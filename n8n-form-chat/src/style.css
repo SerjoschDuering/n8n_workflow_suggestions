@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add any custom global styles here */
+body {
+  /* Example: Smooth font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Chat widget customization */
+:root {
+  /* Smaller font sizes for the chat */
+  --chat--message--font-size: 0.75rem; /* Was 0.875rem, now even smaller */
+  --chat--heading--font-size: 1.25em; /* Was 1.5em, now even smaller */
+  --chat--subtitle--font-size: 0.75rem; /* Was 0.875rem, now even smaller */
+  
+  /* Reduce line height for more compact messages */
+  --chat--message-line-height: 1.4; /* Was 1.5, now even more compact */
+  
+  /* Additional customizations for better fit */
+  --chat--message--padding: 0.5rem; /* Reduce padding in messages */
+  --chat--textarea--height: 40px; /* Smaller input area */
+  
+  /* Use indigo as primary chat color */
+  --chat--color-primary: #4f46e5; /* Indigo-600 */
+  --chat--color-primary-shade-50: #4338ca; /* Indigo-700 */
+  --chat--color-primary-shade-100: #3730a3; /* Indigo-800 */
+}
+
+/* Optional: Style the chat container specifically if needed */
+#n8n-chat-container {
+  /* The chat widget itself should fill this container */
+  /* Ensure the container has a defined height (set in index.html) */
+}
+
+/* Style the AI update prompt area */
+#ai-update-prompt {
+  font-size: 0.875rem;
+}
+
+#ai-update-details {
+  font-size: 0.75rem;
+  max-height: 200px;
+}
+
+/* Enhance form styles with indigo accents */
+.form-input:focus, 
+.form-textarea:focus, 
+.form-select:focus {
+  border-color: #4f46e5 !important; /* Indigo-600 */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2) !important; /* Indigo shadow */
+}
+
+/* Spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
