@@ -9,7 +9,7 @@ export function getSubmitWebhookUrl() {
         console.error('No webhook ID provided in URL parameters');
         return null;
     }
-    return `https://flow.on.rehub.software/webhook-test/${webhookId}`;
+    return `https://flow.on.rehub.software/webhook/${webhookId}`;
 }
 
 /**
