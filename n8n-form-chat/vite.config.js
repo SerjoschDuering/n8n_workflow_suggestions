@@ -9,5 +9,15 @@ export default defineConfig({
     outDir: 'dist',
     // Generate source maps for better debugging
     sourcemap: true,
+    // Ensure assets are handled correctly
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        // Ensure proper chunking
+        manualChunks: undefined,
+        // Ensure proper asset paths
+        assetFileNames: 'assets/[name].[hash].[ext]'
+      }
+    }
   }
 }); 
