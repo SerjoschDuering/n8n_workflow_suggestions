@@ -4,18 +4,10 @@
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    // Redirect to index.html for GitHub Pages single-page applications
-    // This handles routes when users refresh or directly access non-root URLs
-    const segmentCount = 1; // Adjust based on your repo name (1 for username.github.io/repo-name)
-    const location = window.location;
-    const repo = location.pathname.split('/').slice(0, 1 + segmentCount).join('/');
-    const path = location.pathname.slice(repo.length);
-    
-    if (path && path !== '/') {
-      window.location.replace(`${location.origin}${repo}/?path=${path}`);
-    } else {
-      window.location.replace(`${location.origin}${repo}/`);
-    }
+    // Preserve URL parameters when redirecting
+    const params = window.location.search;
+    const baseUrl = '/n8n_workflow_suggestions/form/';
+    window.location.href = baseUrl + (params ? params : '');
   </script>
 </head>
 <body>

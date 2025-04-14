@@ -22,7 +22,11 @@ export const AI_UPDATE_CODEWORD = 'Update_form:';
  * Gets the chat ID from URL parameter 'chat'
  */
 export function getChatEmbedUrl() {
-    const params = new URLSearchParams(window.location.search);
+    // Handle both direct access and redirected URLs
+    const url = window.location.href;
+    const searchParams = url.includes('?') ? url.split('?')[1] : '';
+    const params = new URLSearchParams(searchParams);
+    
     const chatId = params.get('chat');
     if (!chatId) {
         console.error('No chat ID provided in URL parameters');

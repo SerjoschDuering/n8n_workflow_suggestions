@@ -30,10 +30,15 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: Prepare deployment
+        run: |
+          mkdir -p ../form
+          cp -r dist/* ../form/
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: n8n-form-chat/dist
+          path: form
 
   deploy:
     needs: build
