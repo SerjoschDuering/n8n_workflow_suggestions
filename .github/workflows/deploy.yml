@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./n8n-form-chat
+        working-directory: .
     steps:
       - uses: actions/checkout@v4
       
@@ -32,8 +32,8 @@ jobs:
         
       - name: Prepare deployment
         run: |
-          mkdir -p ../form
-          cp -r dist/* ../form/
+          mkdir -p form
+          cp -r dist/* form/
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

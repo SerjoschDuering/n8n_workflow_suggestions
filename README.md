@@ -35,7 +35,7 @@ https://your-domain.com/form?chat=18679f0d-a4f8-433d-bba9-ab71cfde4aa6&webhook=s
 1. Clone the repository:
    ```
    git clone https://github.com/your-username/rehub_n8n_idea.git
-   cd rehub_n8n_idea/n8n-form-chat
+   cd rehub_n8n_idea
    ```
 
 2. Install dependencies:
